@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+void abbreviate(char *word) {
+    int length = strlen(word);    
+    if (length > 10) {
+        printf("%c%d%c\n", word[0], length - 2, word[length - 1]);
+    } else {
+        printf("%s\n", word);
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    char word[101]; 
+    
+    for (int i = 0; i < n; i++) {
+        scanf("%s", word);
+        abbreviate(word);
+    }
+    
+    return 0;
+}
